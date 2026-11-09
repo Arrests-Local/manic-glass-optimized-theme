@@ -1,7 +1,7 @@
 /**
  * @name Manic Glass Optimized
  * @description Transparent Midnight + Discord Mica combination for Vencord, with fewer live blur layers.
- * @version 1.1.1
+ * @version 1.1.2
  * @author Custom integration of Midnight by refact0r and Discord Mica by Coolkie
  * @website https://github.com/refact0r/midnight-discord
  */
@@ -245,8 +245,13 @@ body {
     display: none !important;
 }
 
-/* Hide the server-name chevron while keeping the dropdown control intact. */
-#app-mount :is(.header_f37cb1, .header_XH4OpX) :is(.guildDropdown_f37cb1, .guildDropdown_XH4OpX) > svg {
+/* Hide the native server-menu chevrons inside their header-content wrapper.
+ * Matching the glyph keeps badges, invite controls and notices intact.
+ */
+#app-mount :is(.header_f37cb1, .header_XH4OpX) :is(.guildDropdown_f37cb1, .guildDropdown_XH4OpX) :is(.headerChildren_f37cb1, .headerChildren_XH4OpX) svg:has(> path:is(
+    [d="M5.3 9.3a1 1 0 0 1 1.4 0l5.3 5.29 5.3-5.3a1 1 0 1 1 1.4 1.42l-6 6a1 1 0 0 1-1.4 0l-6-6a1 1 0 0 1 0-1.42Z"],
+    [d="M5.3 14.7a1 1 0 0 0 1.4 0L12 9.42l5.3 5.3a1 1 0 0 0 1.4-1.42l-6-6a1 1 0 0 0-1.4 0l-6 6a1 1 0 0 0 0 1.42Z"]
+)) {
     display: none !important;
 }
 
