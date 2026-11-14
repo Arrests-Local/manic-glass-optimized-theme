@@ -1,7 +1,7 @@
 /**
  * @name Manic Glass Optimized
  * @description Transparent Midnight + Discord Mica combination for Vencord, with fewer live blur layers.
- * @version 1.2.1
+ * @version 1.2.2
  * @author Custom integration of Midnight by refact0r and Discord Mica by Coolkie
  * @website https://github.com/refact0r/midnight-discord
  */
@@ -376,8 +376,8 @@ body {
     }
 }
 
-/* Folder mention count only; leave server badges and voice/status indicators alone. */
-#app-mount [class*="folderHeader_"] [class*="lowerBadge_"] [class*="numberBadge_"] {
+/* Unread/mention count badges: folders, servers, DMs and message channels. */
+#app-mount [class*="numberBadge_"][class*="base_"] {
     background-color: #7d001f !important;
     color: #fff !important;
 }
