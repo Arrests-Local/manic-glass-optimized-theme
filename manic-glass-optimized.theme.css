@@ -1,7 +1,7 @@
 /**
  * @name Manic Glass Optimized
  * @description Transparent Midnight + Discord Mica combination for Vencord, with fewer live blur layers.
- * @version 1.2.0
+ * @version 1.2.1
  * @author Custom integration of Midnight by refact0r and Discord Mica by Coolkie
  * @website https://github.com/refact0r/midnight-discord
  */
@@ -374,4 +374,10 @@ body {
     #app-mount :is(.trailing_c38106, .trailing_3zSH5d) :is(.winButton_c38106, .winButton_3zSH5d) {
         height: calc(var(--window-control-size, 14px) * 2) !important;
     }
+}
+
+/* Folder mention count only; leave server badges and voice/status indicators alone. */
+#app-mount [class*="folderHeader_"] [class*="lowerBadge_"] [class*="numberBadge_"] {
+    background-color: #7d001f !important;
+    color: #fff !important;
 }
