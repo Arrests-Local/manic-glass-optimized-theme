@@ -1,7 +1,7 @@
 /**
  * @name Manic Glass Optimized
  * @description Transparent Midnight + Discord Mica combination for Vencord, with fewer live blur layers.
- * @version 1.2.4
+ * @version 1.2.5
  * @author Custom integration of Midnight by refact0r and Discord Mica by Coolkie
  * @website https://github.com/refact0r/midnight-discord
  */
@@ -380,4 +380,9 @@ body {
 #app-mount [class*="numberBadge_"][class*="base_"] {
     background-color: var(--status-positive, var(--green-2)) !important;
     color: var(--text-0) !important;
+}
+
+/* Midnight currently maps this input token to lime. Keep picker search icons white. */
+#app-mount :is(#gif-picker-tab-panel, #sticker-picker-tab-panel, #emoji-picker-tab-panel) {
+    --input-icon-default: var(--text-3) !important;
 }
